@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v3.3.0
           
         - name: Add SCW Training
-          uses: SecureCodeWarrior/github-action-add-sarif-contextual-training@6cb44f8221965d824309d45c7d38f17dedfb5c60
+          uses: SecureCodeWarrior/github-action-add-sarif-contextual-training@v1
           with:
             inputSarifFile: ./SampleSarif1.sarif
             outputSarifFile: ./processed.sarif
