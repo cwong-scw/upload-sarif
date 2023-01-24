@@ -50,10 +50,6 @@
                      },
                      "defaultConfiguration": {
                         "level": "error"
-                     },
-                     "help": {
-                        "text": "help text",
-                        "markdown": "help _markdown_"
                      }
                   }
                ]
