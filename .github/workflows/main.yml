@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+  
+jobs:
+  my_job:
+    name: upload SARIF
+    runs-on: ubuntu-18.04
+    steps:
+        - name: Import Results
+          uses: github/codeql-action/upload-sarif@v1
+          with:
+            sarif_file: ./SampleSarif1.sarif
