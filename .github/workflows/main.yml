@@ -8,8 +8,15 @@ jobs:
     steps:
         - name: Checkout
           uses: actions/checkout@v3.3.0
+          
+        - name: Add SCW Training
+          uses: SecureCodeWarrior/github-action-add-sarif-contextual-training@master
+          with:
+            inputSarifFile: ./SampleSarif1.sarif
+            outputSarifFile: ./processed.sarif
+            githubToken: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Import Results
           uses: github/codeql-action/upload-sarif@v2
           with:
-            sarif_file: ./SampleSarif1.sarif
+            sarif_file: ./processed.sarif
