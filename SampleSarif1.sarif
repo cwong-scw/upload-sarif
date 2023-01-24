@@ -34,15 +34,16 @@
                      "id": "CVE-2016-1000027",
                      "helpUri": "https://maersk.app.blackduck.com/api/vulnerabilities/CVE-2016-1000027",
                      "shortDescription": {
-                        "text": "CVE-2016-1000027: Spring Framework"
+                        "text": "shortDescription CVE-2016-1000027: Spring Framework"
                      },
                      "fullDescription": {
-                        "text": "Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data.",
-                        "markdown": "Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data."
+                        "text": "fullDescription Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data.",
+                        "markdown": "fullDescription Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data."
                      },
                      "properties": {
                         "category": "org.springframework:spring-asm:3.0.5.RELEASE",
                         "security-severity": "8.9",
+                        "description": "properties description",
                         "tags": [
                            "security"
                         ]
@@ -51,8 +52,8 @@
                         "level": "error"
                      },
                      "help": {
-                        "text": "aaa text",
-                        "markdown": "bbb _markdown_"
+                        "text": "help text",
+                        "markdown": "help _markdown_"
                      }
                   }
                ]
