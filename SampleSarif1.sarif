@@ -863,28 +863,7 @@
     "columnKind" : "unicodeCodePoints",
     "properties" : {
       "semmle.formatSpecifier" : "sarif-latest",
-      "metricResults" : [ {
-        "rule" : {
-          "id" : "py/summary/lines-of-code",
-          "index" : 36,
-          "toolComponent" : {
-            "index" : 0
-          }
-        },
-        "ruleId" : "py/summary/lines-of-code",
-        "value" : 116930
-      }, {
-        "rule" : {
-          "id" : "py/summary/lines-of-user-code",
-          "index" : 37,
-          "toolComponent" : {
-            "index" : 0
-          }
-        },
-        "ruleId" : "py/summary/lines-of-user-code",
-        "value" : 593,
-        "baseline" : 709
-      } ],
+      "metricResults" : [ ],
       "codeqlConfigSummary" : {
         "disableDefaultQueries" : false
       }
