@@ -1,0 +1,138 @@
+{
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs":
+    [
+        {
+            "tool":
+            {
+                "driver":
+                {
+                    "name": "Veracode Static Analysis Pipeline Scan",
+                    "rules":
+                    [
+                        {
+                            "id": "117",
+                            "name": "Improper Output Neutralization for Logs",
+                            "shortDescription":
+                            {
+                                "text": "CWE-117: Improper Output Neutralization for Logs"
+                            },
+                            "helpUri": "https://cwe.mitre.org/data/definitions/117.html",
+                            "properties":
+                            {
+                                "security-severity": "4.0",
+                                "category": "taint",
+                                "tags":
+                                [
+                                    "taint"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "results":
+            [
+                {
+                    "level": "warning",
+                    "rank": 4,
+                    "message":
+                    {
+                        "text": "<span>This call to java.util.logging.Logger.info() could result in a log forging attack.  Writing untrusted data into a log file allows an attacker to forge log entries or inject malicious content into log files.  Corrupted log files can be used to cover an attacker's tracks or as a delivery mechanism for an attack on a log viewing or processing utility.  For example, if a web administrator uses a browser-based utility to review logs, a cross-site scripting attack might be possible. The first argument to info() contains tainted data. The tainted data originated from an earlier call to AnnotationVirtualController.vc_annotation_entry.</span> <span>Avoid directly embedding user input in log files when possible.  Sanitize untrusted data used to construct log entries by using a safe logging mechanism such as the OWASP ESAPI Logger, which will automatically remove unexpected carriage returns and line feeds and can be configured to use HTML entity encoding for non-alphanumeric data.  Alternatively, some of the XSS escaping functions from the OWASP Java Encoder project will also sanitize CRLF sequences.  Only create a custom blocklist when absolutely necessary.  Always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.</span> <span>References: <a href=\"https://cwe.mitre.org/data/definitions/117.html\">CWE</a> <a href=\"https://owasp.org/www-community/attacks/Log_Injection\">OWASP</a> <a href=\"https://docs.veracode.com/r/review_cleansers?tocId=nYnZqAenFFZmB75MQrZwuA\">Supported Cleansers</a></span>"
+                    },
+                    "locations":
+                    [
+                        {
+                            "physicalLocation":
+                            {
+                                "artifactLocation":
+                                {
+                                    "uri": "src/main/java/com/github/rafaelrpinto/vulnerablejavawebapp/controller/UserController.java"
+                                },
+                                "region":
+                                {
+                                    "startLine": 46
+                                }
+                            },
+                            "logicalLocations":
+                            [
+                                {
+                                    "name": "processLoginForm",
+                                    "fullyQualifiedName": "com.github.rafaelrpinto.vulnerablejavawebapp.controller.UserController.processLoginForm",
+                                    "kind": "function"
+                                },
+                                {
+                                    "fullyQualifiedName": "java.util.logging.Logger.info",
+                                    "kind": "member",
+                                    "parentIndex": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "ruleId": "117",
+                    "partialFingerprints":
+                    {
+                        "flawHash": "98533932",
+                        "flawHashCount": "1",
+                        "flawHashOrdinal": "1",
+                        "causeHash": "110190442",
+                        "causeHashCount": "1",
+                        "causeHashOrdinal": "1",
+                        "procedureHash": "3360674927",
+                        "prototypeHash": "3024411242"
+                    }
+                },
+                {
+                    "level": "warning",
+                    "rank": 4,
+                    "message":
+                    {
+                        "text": "<span>This call to java.util.logging.Logger.info() could result in a log forging attack.  Writing untrusted data into a log file allows an attacker to forge log entries or inject malicious content into log files.  Corrupted log files can be used to cover an attacker's tracks or as a delivery mechanism for an attack on a log viewing or processing utility.  For example, if a web administrator uses a browser-based utility to review logs, a cross-site scripting attack might be possible. The first argument to info() contains tainted data. The tainted data originated from an earlier call to AnnotationVirtualController.vc_annotation_entry.</span> <span>Avoid directly embedding user input in log files when possible.  Sanitize untrusted data used to construct log entries by using a safe logging mechanism such as the OWASP ESAPI Logger, which will automatically remove unexpected carriage returns and line feeds and can be configured to use HTML entity encoding for non-alphanumeric data.  Alternatively, some of the XSS escaping functions from the OWASP Java Encoder project will also sanitize CRLF sequences.  Only create a custom blocklist when absolutely necessary.  Always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.</span> <span>References: <a href=\"https://cwe.mitre.org/data/definitions/117.html\">CWE</a> <a href=\"https://owasp.org/www-community/attacks/Log_Injection\">OWASP</a> <a href=\"https://docs.veracode.com/r/review_cleansers?tocId=nYnZqAenFFZmB75MQrZwuA\">Supported Cleansers</a></span>"
+                    },
+                    "locations":
+                    [
+                        {
+                            "physicalLocation":
+                            {
+                                "artifactLocation":
+                                {
+                                    "uri": "src/main/java/com/github/rafaelrpinto/vulnerablejavawebapp/controller/UserController.java"
+                                },
+                                "region":
+                                {
+                                    "startLine": 82
+                                }
+                            },
+                            "logicalLocations":
+                            [
+                                {
+                                    "name": "processSignUpForm",
+                                    "fullyQualifiedName": "com.github.rafaelrpinto.vulnerablejavawebapp.controller.UserController.processSignUpForm",
+                                    "kind": "function"
+                                },
+                                {
+                                    "fullyQualifiedName": "java.util.logging.Logger.info",
+                                    "kind": "member",
+                                    "parentIndex": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "ruleId": "117",
+                    "partialFingerprints":
+                    {
+                        "flawHash": "3372263407",
+                        "flawHashCount": "1",
+                        "flawHashOrdinal": "1",
+                        "causeHash": "2067588415",
+                        "causeHashCount": "1",
+                        "causeHashOrdinal": "1",
+                        "procedureHash": "2012610020",
+                        "prototypeHash": "3531726039"
+                    }
+                }
+            ]
+        }
+    ]
+}
